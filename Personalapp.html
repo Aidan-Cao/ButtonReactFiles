@@ -1,8 +1,8 @@
-import React from 'react';
-//import logo from './logo.svg';
-//import Counter from './Counter.js'
+<!DOCTYPE html>
 
-function returnrandom() {
+<html>
+<script>
+    function returnrandom() {
     var responses = ["It is certain!",
 "It is decidedly so",
 "Without a doubt!",
@@ -36,12 +36,10 @@ function returnrandom() {
 "Go for it!",
 "Don't bet on it",
 "Forget about it."]
-    render() {
-        return (<p>Math.round(Math.random() * responses.length</p>)
-
-    }
-    
+document.getElementById('question').value = responses[Math.round(Math.random() * responses.length) - 1];
 }
-/*
-if 
-*/
+
+</script>
+    <input id = "question" placeholder = "Type a question"></input> 
+    <button onclick = "returnrandom()">find answer</button>
+</html>
