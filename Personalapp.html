@@ -39,7 +39,20 @@
 document.getElementById('question').value = responses[Math.round(Math.random() * responses.length) - 1];
 }
 
+function checkquestion(){
+    if (document.getElementById('question').value.split("")[document.getElementById('question').value.length - 1] == "?"){
+        returnrandom()
+    
+    }
+    else{
+        document.getElementById('question').value = "Not a question"
+    }   
+}
+
 </script>
-    <input id = "question" placeholder = "Type a question"></input> 
-    <button onclick = "returnrandom()">find answer</button>
+<div style = "margin: 0; position: absolute; top: 30%; left: 25%;">
+    <p style = "font-size: 40px; text-align: center">Magic 8 Ball</p>
+    <input style = "width: 500px; height: 100px; font-size: 40px; padding: 10px" id = "question" placeholder = "Type a question"></input> 
+    <button style = " height: 100px; font-size: 40px; padding: 10px; background-color: rgb(71, 114, 255); color: white" onclick = "checkquestion()">find answer</button>
+</div>
 </html>
